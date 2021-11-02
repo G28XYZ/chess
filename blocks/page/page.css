@@ -1,0 +1,10 @@
+.page {
+  font-family: "FontAwesome";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(48, 47, 77);
+  color: white;
+}

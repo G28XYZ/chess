@@ -1,0 +1,8 @@
+.table {
+  display: grid;
+  grid-template-columns: 2vw repeat(8, 1fr) 2vw;
+  grid-template-rows: 2vw repeat(8, 1fr) 2vw;
+  width: calc(30vw + 30vh);
+  height: calc(30vw + 30vh);
+  margin: 0 auto;
+}
