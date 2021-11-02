@@ -1,15 +1,22 @@
 .table__cell-icon {
-  max-width: 50%;
-  animation: animate 3s linear infinite;
-  text-shadow: 0 0 1px #0072ff, 0 0 10px #0072ff, 0 0 15px #0072ff,
-    0 0 20px #0072ff;
+  font-size: 3.5vw;
+  cursor: pointer;
 }
 
-@keyframes animate {
-  from {
-    filter: hue-rotate(0deg);
+@media screen and (max-width: 1280px) {
+  .table__cell-icon {
+    font-size: 5vw;
   }
-  to {
-    filter: hue-rotate(360deg);
+}
+
+@media screen and (max-width: 768px) {
+  .table__cell-icon {
+    font-size: 6vw;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .table__cell-icon {
+    font-size: 7vw;
   }
 }

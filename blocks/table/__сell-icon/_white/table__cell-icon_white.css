@@ -1,0 +1,5 @@
+.table__cell-icon_white {
+  color: rgba(255, 255, 255, 0.9);
+  animation: animate 6s linear infinite;
+  text-shadow: 0 0 1px #0072ff, 0 0 10px #0072ff, 0 0 15px #0072ff, 0 0 20px #0072ff;
+}

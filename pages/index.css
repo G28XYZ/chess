@@ -1,14 +1,26 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
 @import url(../vendor/font-awesome.min.css);
+@import url(../blocks/animate/animate.css);
 
 @import url(../blocks/page/page.css);
 
 @import url(../blocks/content/content.css);
 
+/* <button> */
+@import url(../blocks/button/button.css);
+@import url(../blocks/button/button.js);
+/* </button> */
+
+/* <header> */
+@import url(../blocks/header/header.css);
+/* </header> */
+
 /* <table> */
 @import url(../blocks/table/table.css);
+@import url(../blocks/table/_off/table__off.css);
 @import url(../blocks/table/__cell/table__cell.css);
 @import url(../blocks/table/__сell-icon/table__cell-icon.css);
 @import url(../blocks/table/__сell-icon/_black/table__cell-icon_black.css);
+@import url(../blocks/table/__сell-icon/_white/table__cell-icon_white.css);
 /* </table> */
