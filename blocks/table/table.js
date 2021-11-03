@@ -3,39 +3,43 @@ function chessFunc() {
 
   for (let elem of chess) {
     elem.onmousedown = function (e) {
-      // 1. отследить нажатие
+      let coords = getCoords(elem);
+      let shiftX = e.pageX - coords.left;
+      let shiftY = e.pageY - coords.top;
 
-      // подготовить к перемещению
-      // 2. разместить на том же месте, но в абсолютных координатах
       elem.style.position = "absolute";
-      moveAt(e);
-      // переместим в body, чтобы мяч был точно не внутри position:relative
       document.body.appendChild(elem);
+      moveAt(e);
 
-      elem.style.zIndex = 1000; // показывать мяч над другими элементами
+      elem.style.zIndex = 1000; // над другими элементами
 
-      // передвинуть мяч под координаты курсора
-      // и сдвинуть на половину ширины/высоты для центрирования
       function moveAt(e) {
-        elem.style.left = e.pageX - elem.offsetWidth / 2 + "px";
-        elem.style.top = e.pageY - elem.offsetHeight / 2 + "px";
+        elem.style.left = e.pageX - shiftX + "px";
+        elem.style.top = e.pageY - shiftY + "px";
       }
 
-      // 3, перемещать по экрану
       document.onmousemove = function (e) {
         moveAt(e);
       };
 
-      // 4. отследить окончание переноса
       elem.onmouseup = function () {
         document.onmousemove = null;
         elem.onmouseup = null;
       };
-
-      elem.ondragstart = function () {
-        return false;
-      };
     };
+
+    elem.ondragstart = function () {
+      return false;
+    };
+
+    function getCoords(elem) {
+      // кроме IE8-
+      var box = elem.getBoundingClientRect();
+      return {
+        top: box.top + pageYOffset,
+        left: box.left + pageXOffset,
+      };
+    }
   }
 }
 

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Muli:400,800&display=swap");
+
 .button {
   font-weight: 800;
   background: transparent;
@@ -12,16 +13,11 @@
   cursor: pointer;
   transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
-  border: 3px solid #fe53bb;
-  color: #fe53bb;
-  background-color: #840151;
-}
-
-.button {
   border: 3px solid #00d4ff;
   color: #00d4ff;
   background-color: #002a33;
 }
+
 .button:hover {
   border-color: #33ddff;
   color: #33ddff;
