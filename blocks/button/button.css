@@ -15,7 +15,6 @@
   transition-timing-function: ease-in-out;
   border: 3px solid #00d4ff;
   color: #00d4ff;
-  background-color: #002a33;
 }
 
 .button:hover {
@@ -27,7 +26,5 @@
   border-color: #33ddff;
   color: #33ddff;
   background-color: #005566;
-  padding: 16px 16px;
   outline: 0;
-  border-radius: 12px;
 }
